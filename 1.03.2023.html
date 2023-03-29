@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="znaj"></div>
+
+
+
+    <script type="text/babel">
+    const root = ReactDOM.createRoot(document.getElementById('znaj'));
+                   
+
+function Imie(){
+    let moje = "Marta";
+    let znaj = [];
+    const mystyle= {color:"white"};
+    if(znaj.length>0)
+        return(
+        //<h2 style={{backgroundColor:"paleGreen"}}>{moje} twoi znajomi to {znaj}</h2>
+        <h2>{moje} twoi znajomi to {znaj}</h2>
+        )
+    
+    else 
+        return (
+            //<h2 style={mystyle}>you have no friends</h2>
+            <>            
+        <h2>you have no friends</h2>
+        <h2>no bitches</h2>
+        <h2>no father</h2>
+        <h2>no milk</h2>
+        <h2>no mother</h2>
+        <h2>no son</h2>
+        <h2>no milf</h2>
+        <h2>no dilf</h2>
+        <h2>no name</h2>
+        <h2>no will to live</h2>
+        <h2>but you have trauma and mental disorders 😘</h2>
+        <h1>and i'm {moje} and i have friends not like you, you idiot 😘</h1>
+        </>
+        )
+}
+root.render(<Imie />);
+
+// function Garaz(){}
+//         if(car.length>0)
+//         return(
+//             <>
+//             <h2>garaz</h2>
+//             <h1>masz {car.length} aut</h1>
+//             </>
+//         )
+//         else 
+//         return(
+//             <>
+//             <h2>garaz</h2>
+//             <h1>nie masz</h1>
+//             </>
+//         )
+// let car = ['Ford', 'BMW', 'Audi'];
+// root.render(<Garaz />);
+
+// function Strzaltraf(){
+//     const shoot = () =>{
+//         alert("zajebisty strzal")
+//     }
+ // function Idiot(){
+ //     return <h2>strzelasz jak ciota :*</h2>
+ // }
+ // function Strzal(props){
+ //     const moze = props.moze;
+
+ //     if(moze)
+ //         return <Strzaltraf/>;
+    
+ //     else
+ //     return <Idiot/>;
+// }
+//     return <button style={{backgroundColor:"green",height:"500px",width:"1000px",fontSize:"80px",marginLeft:"25%"}} onClick = {shoot}>strzelaj</button>
+
+// root.render(<Strzal moze={true}/>);
+
+
+
+
+
+//          function cal (a, b)
+//      {
+//          const dod = a + b;
+//          const min = a - b;
+//          const razy = a * b;
+//          const dziel = a / b;
+
+//          return [dod,min,razy,dziel];
+//     }
+//  const [dod,min,razy,dziel] = cal(5, 5);
+//  document.write("<h1>suma jest rowna "+dod+"</h1>");
+//  document.write("<h1> roznica jest rowna "+min+"</h1>");
+//  document.write("<h1>mnozenie jest rowne "+razy+"</h1>");
+//  document.write("</h2>dzielenie jest rowne "+dziel+"</h2>");
+
+// function razraz(){
+//     return "jasna dupa"
+// }
+
+//  function Comp(props){
+//      return (<>
+//         <h1>witaj {props.color}</h1>
+//         </>
+//      )
+//     }
+// function XD(){
+//     return(
+//         <>
+//         <p>jak sie masz bo ja mam zalamanie nerwowe</p>
+//         <Comp color="red"/>
+//         </>
+//     )
+// }
+// const root = ReactDom.createRoot(document.getElementById('add'));
+    //root.render(<Comp color="red"/>)
+    </script>
+</body>
+</html>

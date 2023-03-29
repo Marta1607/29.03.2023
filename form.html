@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="forn.css">
+</head>
+<body>
+
+
+    <div id="znaj"></div>
+
+
+    <script type="text/babel">
+
+const root = ReactDOM.createRoot(document.getElementById('znaj'));
+
+
+        function Strona(){
+            let time = new Date().toLocaleTimeString();
+            let [currentTime, changeTime] = React.useState(time);
+
+            function checkTime() {
+                time = new Date().toLocaleTimeString();
+                changeTime(time);
+            }
+
+  setInterval(checkTime, 1000);
+
+        const [ polub, setPolub] = React.useState(0);
+        const handleButtonD = () => {
+            setPolub(polub+1)
+        };
+        const handleButton = () =>{
+            polub === 0 ? setPolub(0) : setPolub(polub-1);
+        } ;
+
+        return(
+            <>
+            <h1>{currentTime}</h1>
+            <h2 className="nawi">lato nad morzem</h2>
+            <img src="./6121-z--neta--ale-ladne-.webp" alt=""/>
+            <hr/>
+            <div className="but">
+                <br/><button onClick={handleButtonD} className="bb">polub</button>
+                
+                <button onClick={handleButton} className="bb">usun</button>
+            </div>
+            <div className="par">
+                <p> {polub} polubień</p>
+                <p>opis</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, sint!</p>
+            </div>
+            </>
+        )
+        
+        }
+        root.render(<Strona />);
+
+              
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(69, 30, 30);
+  color: white;
+}
+.navim {
+  background-color: rgba(134, 31, 22, 0.608);
+  padding: 5%;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: -0.2%;
+}
+
+.inp {
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 2%;
+  background-color: rgb(255, 255, 255);
+}
+#root {
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 100%;
+  height: 150%;
+  text-shadow: 0, 0, 2px black;
+}
+.custom-shape-divider-bottom-1680087939 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1680087939 svg {
+  position: relative;
+  display: block;
+  width: calc(115% + 1.3px);
+  height: 183px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1680087939 .shape-fill {
+  fill: #cc3232;
+}
