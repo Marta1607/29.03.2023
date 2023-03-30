@@ -5,19 +5,20 @@ body {
   text-align: center;
   background-color: rgb(69, 30, 30);
   color: white;
+  font-size: 150%;
 }
 .navim {
   background-color: rgba(134, 31, 22, 0.608);
   padding: 5%;
   text-align: center;
   border-radius: 8px;
-  margin-top: -0.2%;
+  margin-top: -0.02%;
 }
 
 .inp {
   border: none;
   border-bottom: 1px solid black;
-  margin: 2%;
+  /* margin: 1%; */
   background-color: rgb(255, 255, 255);
 }
 #root {
@@ -47,4 +48,8 @@ body {
 
 .custom-shape-divider-bottom-1680087939 .shape-fill {
   fill: #cc3232;
+}
+
+.zle {
+  color: #a40000;
 }

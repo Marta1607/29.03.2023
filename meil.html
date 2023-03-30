@@ -48,38 +48,32 @@
       function Meil() {
         const handleClick = () => {
           if (meil.includes("@") && meil.includes(".")) {
-            if (haslo == haslot) {
-              setNapis("hasla sa dobre");
-            } else {
-              setNapis("hasla nie sa takie same");
+            if (haslo.length < 8) {
+              setCzyh("haslo jest za slabe");
+              if (haslo == haslot) {
+                setCzyht("hasla sa dobre");
+                setKolorr("red");
+              } else {
+                setCzyht("hasla nie sa takie same");
+                setKolorre("red");
+              }
             }
           } else {
-            setNapis("meil jest zly");
+            setCzymeil("meil jest zly");
+            setKolorred("red");
           }
         };
 
+        const [czymeil, setCzymeil] = React.useState("");
+        const [czyh, setCzyh] = React.useState("");
+        const [czyht, setCzyht] = React.useState("");
         const [napis, setNapis] = React.useState("");
         const [meil, setMeil] = React.useState("");
         const [haslo, setHaslo] = React.useState("");
         const [haslot, setHaslot] = React.useState("");
-
-        // const meil = document.getElementById("inpme").value
-        // if(meil.includes('@'))
-        // return <p>meil jest git</p>
-        // else
-        // return <p>meil jest zly</p>
-
-        // const haslo = document.getElementById("inph").value
-        // if(haslo.length > 8)
-        // return <p>dobra dlugosc </p>
-        // else
-        // return <p>za slabe haslo</p>
-
-        // const haslo2 = document.getElementById("inpht").value
-        // if(haslo2 === haslo)
-        // return <p>takie same hasla</p>
-        // else
-        // return <p>hasla sa inne</p>
+        const [kolorr, setKolorr] = React.useState("");
+        const [kolorre, setKolorre] = React.useState("");
+        const [kolorred, setKolorred] = React.useState("");
 
         return (
           <>
@@ -87,18 +81,21 @@
               <h2 className="navim">rejestruj konto</h2>
               <div>
                 <p> podaj email</p>
+                <p style={{ kolorred }}> {czymeil}</p>
                 <input
                   className="inp"
                   onChange={(e) => setMeil(e.target.value)}
                   type="email"
                 />
                 <p>haslo </p>
+                <p style={{ kolorr }}> {czyh}</p>
                 <input
                   className="inp"
                   type="password"
                   onChange={(e) => setHaslo(e.target.value)}
                 />
                 <p>podaj jeszcze raz </p>
+                <p style={{ kolorre }}> {czyht}</p>
                 <input
                   className="inp"
                   type="password"
@@ -106,7 +103,6 @@
                 />
                 <p> </p>
                 <button onClick={handleClick}> potwierdz</button>
-                <p> {napis}</p>
                 <p>witaj {meil}</p>
               </div>
             </div>
